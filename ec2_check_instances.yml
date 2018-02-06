@@ -1,0 +1,14 @@
+---
+ - hosts: localhost
+   tasks:
+    
+    - name: check the instance
+      ec2_instance_facts:
+       region: ap-south-1
+       filters:
+        availability-zone: ap-south-1b
+      register: result
+    - name: show output
+      debug: 
+       var: result.instances[0].instance_id
+       var: result.instances[0].network_interfaces[0].association.public_ip

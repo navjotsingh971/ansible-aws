@@ -1,0 +1,8 @@
+---
+ - hosts: localhost
+   tasks:
+    - name: delete security-group
+      ec2_group:
+       region: ap-south-1
+       name: ansible
+       state: absent

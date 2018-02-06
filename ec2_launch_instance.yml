@@ -1,0 +1,19 @@
+---
+ - hosts: localhost
+   tasks:
+   - name : install boto3
+     pip: name=boto3
+    
+   - name: start instance  
+     ec2:
+      
+      region: ap-south-1
+      key_name: linux.key
+      instance_type: t2.micro
+      image: ami-531a4c3c
+      count: 1
+      wait: yes
+     register: ec
+   - name: show result 
+     debug: 
+      var: ec

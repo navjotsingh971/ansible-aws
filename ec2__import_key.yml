@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   tasks: 
+    - name: import public key on aws
+      ec2_key: 
+       name: ansible
+       region: ap-south-1
+       key_material: "{{ item }}"
+      with_file: /root/Desktop/keys/id_rsa.pub

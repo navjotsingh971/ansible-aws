@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   tasks:
+    - name: terminate instance 
+      ec2:
+       region: ap-south-1
+       instance_ids: i-037fc46a42a0547d9 
+       state: absent
+      register: ec2 
