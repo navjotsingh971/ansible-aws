@@ -1,0 +1,5 @@
+# ansible-aws
+first of all set access_key and secret_key by environment variable
+in linux save these keys in /root/.bashrc file 
+export AWS_ACCESS_KEY_ID='AKxxxxxxxxxxxxxxxxxxx'
+export AWS_SECRET_ACCESS_KEY='xxxxxxxxxxxxxxxx'
